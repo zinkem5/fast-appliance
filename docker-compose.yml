@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  pipelines:
+    build: ../fast-http-pipeline
+    ports:
+      - "80:80"
+    volumes:
+      - ./pipelines:/var/config/pipelines
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost" ]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+  templates:
+    build: ../fast-docker
+    expose:
+      - "80"
+    volumes:
+      - ./templates:/var/config/templates
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost" ]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s

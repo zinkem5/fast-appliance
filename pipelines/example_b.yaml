@@ -1,0 +1,7 @@
+title: example_b
+stages:
+  - task: Request
+    url: http://templates/cata
+    options:
+      method: POST
+    body: $

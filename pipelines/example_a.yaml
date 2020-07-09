@@ -1,0 +1,4 @@
+title: example_a
+stages:
+  - task: Request
+    url: http://templates/cata

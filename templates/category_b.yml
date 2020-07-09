@@ -1,0 +1,6 @@
+title: catb
+definitions:
+  name:
+    type: string
+template: |
+  goodbye {{name}}!

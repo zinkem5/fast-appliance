@@ -1,0 +1,6 @@
+title: cata
+definitions:
+  name:
+    type: string
+template: |
+  hello {{name}}
